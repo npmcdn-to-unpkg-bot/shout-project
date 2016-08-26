@@ -8,7 +8,7 @@ h1
 	font-family: 'Helvetica', sans-serif
 	color: gray
 	font-size: 14px	
-	margin: 10px 0px 10px 0px
+	margin: 0px 0px 10px 0px
 
 #big-number
 	font-size:56px
@@ -23,7 +23,7 @@ h1
 	padding: 0px
 	
 .navbar
-	margin-bottom: 0
+	margin-bottom: 0px
 
 #review-tag-specific
 	font-size:12px
@@ -38,33 +38,83 @@ a:hover
 	
 	#shouter-score
 		font-size: 28px
-
 	
-
 
 #new-review-post
 	display:none
 	width: 100vw
 	height: 100vh
-	background: blue
+	background:  rgba(50, 100, 250, 0.6)
 	position: absolute
 	top: 0
 	left:0
-	opacity: 0.25
 	z-index:1
 	
 	#yaya
+		text-align: center
 		z-index:2
 		background: white !important
 		height: 300px
 		width: 40%
 		margin:auto
-		top: 250px
+		top: 150px
 		left: 30%
 		position: absolute
-		opacity: 1
+		transition: all 1s
+	    box-shadow: 1em 0.5em 1em #333
+	    
+	    #new-main-header
+			text-align: center
+			font-family: 'Poiret One', cursive
+			font-size: 58px
 		
-	
+		#about
+			text-align: center
+			font-family: 'Poiret One', cursive
+			font-size: 28px	
+			
+			#company-label
+				text-align: center
+				display:none
+				font-family: 'Poiret One', cursive
+				font-size: 28px			
+
+		#post-review
+			text-align: center
+			background: white 
+
+			#company-autoform
+				margin-top: 20px
+			
+			#slider-container
+				margin-top: 25px
+				margin-bottom: 5px
+				width:100%
+				text-align:center
+
+			#rating-input
+			#company-input
+				width:150px
+				margin: auto
+
+			#review-input
+				width: 500px
+				height: 200px
+				margin: auto
+
+			#tag-input.form-control
+				width: 50px !important
+				margin: auto
+
+			#reason-input
+				width: 250px
+				margin: auto
+
+			#featured
+				text-align: center
+				font-family: 'Quicksand', sans-serif
+				font-size: 14px	
+
 
 ul.flash-messages
 	transition: all .4s ease-in-out
@@ -176,6 +226,7 @@ ul.flash-messages
 			color: red
 			text-align: center
 			font-family: 'Poiret One', cursive;
+
 
 
 .jumbotron

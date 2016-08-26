@@ -1,0 +1,32 @@
+<!-- experimenting with modals -->
+<div id="new-review-post" hidden>
+  <div id="yaya">
+      <div id="new-main-header">SHOUT</div>
+      <span id="about">about <span id="company-label"></span></span>
+      <form class="form" id="post-review">
+          <input id="company-autoform" placeholder="Company"></input>
+
+          <div id="slider-container" style="margin-top:15px;text-align:center;">
+            <div id="slider" style="width:300px;margin:auto;"></div>
+            <div id="slider-img" style="width:300px;margin:auto;padding-top:15px;padding-bottom;25px;">
+              <span class="glyphicon glyphicon-volume-up" aria-hidden="true" style="color: black;font-size:28px;"></span>
+            </div>
+            <div id="rating-input"></div>
+          </div>
+          <div id="rating-description">neither good nor bad</div>
+
+          <textarea type="review" class="form-control" id="review-input" placeholder="review here"></textarea>
+          <input type="reason" class="form-control" id="reason-input" placeholder="why did you use this company?" hidden></input>
+
+          <select class="form-control" id="tag-input" hidden>
+              <option disabled selected>Tag this message</option>
+            {% for tag in review_tags %}
+              <option value="{{ tag.name }}">{{ tag }}</option>
+            {% endfor %}
+          </select>
+
+          <button type="button" class="btn btn-default" id="submit-review" onclick="hookup()">POST</button>
+      </form>
+
+  </div>
+</div>

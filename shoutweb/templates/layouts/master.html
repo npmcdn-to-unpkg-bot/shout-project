@@ -68,7 +68,8 @@
                 </form>
 
                 {% if user.is_authenticated %}
-                  <li class="bold-link"><a href="/">{{ this_user.first_name }}</a></li>
+                  <li class="bold-link"><a href="#" id="newman" onclick="ya()">new</a></li>
+                  <li class="bold-link"><a href="/users/{{ current_user.id }}">{{ current_user.email }}</a></li>
                 <li><a class="bold-link" href="/logout">Log Out</a></li>
                 {% else %}
                   <li class="bold-link" id="login-button"><a href="/login">Log In</a></li>                
@@ -99,6 +100,24 @@
     </div>
 
   </div>
+
+
+
+
+
+<script>
+
+// $("#newman").on('click', function() {
+
+// function ya() {
+  // $("#new-review-post").show();
+  // $("#yaya").css("background-color", "white !important");
+  // $("#yaya").css("z-index", "9999 !important");
+// }
+
+
+
+</script>
 
 </body>
 </html>

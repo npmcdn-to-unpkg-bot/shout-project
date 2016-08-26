@@ -12,12 +12,10 @@
 
 {% block content %}
 
+<div class="login-pages">
+  <div id="login-container-box">
+    <div id="new-main-header">SHOUT</div>
 
-<div class="jumbotron">
-  <div class="jumbotron-information">
-    <h1 id="jumbotron-header-main"></h1>
-
-    <p>
       <form class="form" id="signup-container">
         <p id="signup-header">Sign Up</p>
         <div class="form-group">
@@ -28,21 +26,15 @@
           <input type="password" class="form-control" id="password" placeholder="password"/>
           <input type="password" class="form-control" id="password-confirm" placeholder="confirm password"/>
           </div>
-
           <button type="button" class="btn btn-default" id="submit-review" onclick="create_user()">sign up</button>
         </div>
 
         <a id="login-link" href="/login">log in</a>
       </form>
-    </p>
-    <p id="slogan">make your voice count</p>
+      <p id="slogan">make your voice count</p>
+
   </div>
 </div>
 
-<div class="page-content">
-  <div class="row">
-
-	</div>
-</div>
 
 {% endblock %}

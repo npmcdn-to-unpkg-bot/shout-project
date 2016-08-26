@@ -30,7 +30,7 @@ def home(request):
 	ctx['companies'] = Company.objects.all().order_by('-create_date')
 	ctx['reviews'] = Review.objects.all().order_by('-create_date')
 	ctx['review_tags'] = ReviewTag.objects.all()
-	ctx['user'] = user
+	ctx['user'] = ctx['current_user'] = user
 	logger.info("User: %s" % user)
 
 
@@ -90,10 +90,15 @@ def signup(request):
 
 def shouter(request, shouter_id):
 	ctx={}
-	ctx['this_user'] = this_user = User.objects.get(pk=shouter_id)
 	ctx['PAGE_TITLE'] = 'SHOUT | Shouter'
-	shouter=this_user.shouter
-	ctx['reviews'] = this_user.reviews.all()
+	ctx['current_user'] = current_user = request.user
+
+	this_shouter = User.objects.get(pk=shouter_id)
+	shouter = this_shouter.shouter
+	ctx['this_shouter'] = this_shouter
+
+
+	ctx['reviews'] = this_shouter.reviews.all()
 	ctx['reviews_count'] = len(ctx['reviews'])
 
 	ctx['positive_reviews'] = shouter.get_positive_reviews()
@@ -114,7 +119,7 @@ def shouter(request, shouter_id):
 	ctx['shouter_fav_companies'] = shouter.get_favorite_companies()
 	ctx['shouter_hated_companies'] = shouter.get_hated_companies()
 
-
+	ctx['review_tags'] = ReviewTag.objects.all()
 	return base.render(request, 'home/shouter', ctx)
 
 def companies(request):

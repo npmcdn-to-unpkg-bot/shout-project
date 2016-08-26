@@ -1,120 +1,66 @@
-#master-container {
-  font-family: helvetica;
-}
 .container-fluid {
   padding: 0px;
 }
 .navbar {
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
-a:hover {
-  text-decoration: none;
-}
-ul.flash-messages {
+#contact {
+  background: rgba(155,100,255,0.6);
   width: 100vw;
-  color: #fff;
-  margin-bottom: 0;
-  list-style: none;
-  text-align: center;
-  padding: 10px;
-  height: 40px;
-  width: 100vw;
-}
-ul.flash-messages#error {
-  background: #e04646;
-}
-ul.flash-messages#info {
-  background: #05cc47;
-}
-.page-content {
-  margin-left: 15px;
-  margin-right: 15px;
-  max-width: 1200px;
-  margin: auto;
-  font-family: 'Open Sans', sans-serif;
-}
-.page-content #reviews-header,
-.page-content #companies-header {
-  font-family: 'Poiret One', cursive;
-  text-align: center;
-}
-.page-content .company-box {
-  border-bottom: 1px solid #808080;
-  background: light-gray;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 10px 10px 25px 10px;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
   overflow: hidden;
-  clear: both;
+  display: block;
 }
-.page-content .company-box #name {
-  font-size: 18px;
-  color: #1ca0de;
-}
-.page-content #clear-space {
-  height: 25px;
+#contact #modaltest {
+  width: 33%;
+  height: 200px;
+  position: absolute;
+  top: 200px;
+  left: 33%;
+  z-index: 10000;
   background: #fff;
+  opacity: 0.99;
+  box-shadow: 0.5em 0.5em 1em #333;
 }
-.page-content .review-box {
-  border-bottom: 1px solid #808080;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
-  overflow: hidden;
-  clear: both;
-}
-.page-content .review-box #review-company-name {
-  font-size: 18px;
-  color: #1ca0de;
-}
-.page-content .review-box #questions,
-.page-content .review-box #create-date {
-  font-size: 10px;
-}
-.page-content .main-review {
-  border-bottom: 1px solid #808080;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-.page-content .main-review #review-rating {
-  font-size: 18px;
-  color: #1ca0de;
-}
-.page-content .main-review #create-date {
-  font-size: 10px;
-}
-.page-content #review-tag-links {
-  text-align: center;
-}
-.page-content #review-tag-links .review-tag {
-  margin-right: 20px;
-  color: #00f;
-}
-.page-content #trending-up-container {
-  border: 1px solid #808080;
-  padding: 15px;
-  margin-bottom: 25px;
-}
-.page-content #trending-up-container #trending-up-header {
-  color: #008000;
+#new-main-header {
   text-align: center;
   font-family: 'Poiret One', cursive;
+  font-size: 58px;
 }
-.page-content #trending-down-container {
-  border: 1px solid #808080;
-  padding: 15px;
-  margin-bottom: 25px;
-}
-.page-content #trending-down-container #trending-down-header {
-  color: #f00;
+.login-pages {
   text-align: center;
-  font-family: 'Poiret One', cursive;
+  transition: all 0.4s ease-in-out;
+  background-color: #0ff;
+  border-radius: none;
+  width: 100vw;
+  height: 100vh;
+}
+.login-pages a {
+  color: #000;
+}
+.login-pages #login-container-box {
+  width: 500px;
+  height: 350px;
+  background: #fff;
+  border: 1px solid #808080;
+  margin: auto;
 }
 .jumbotron {
+  text-align: center;
+  transition: all 0.4s ease-in-out;
   background-color: #0ff;
   margin-bottom: 0;
   border-radius: none;
+}
+.jumbotron a {
+  color: #000;
+}
+.jumbotron #login-container-box {
+  width: 400px;
+  height: 250px;
+  margin: auto;
 }
 .jumbotron #jumbotron-header-main {
   text-align: center;
@@ -122,41 +68,27 @@ ul.flash-messages#info {
   font-family: 'Poiret One', cursive;
 }
 .jumbotron #slogan {
-  text-align: center;
+  text-align: 2s;
   font-family: 'Poiret One', cursive;
 }
-.jumbotron #signup-container,
-.jumbotron #login-container {
-  width: 450px;
-  margin: auto;
-  border: 1px solid #808080;
-  background: #fff;
-  padding: 25px;
+.jumbotron #write-a-review {
   text-align: center;
 }
-.jumbotron #signup-container #signup-header,
-.jumbotron #login-container #signup-header,
-.jumbotron #signup-container #login-header,
-.jumbotron #login-container #login-header {
+.jumbotron #write-a-review:hover {
+  cursor: pointer;
+}
+.jumbotron #company-groups .company-group {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+}
+.jumbotron #company-name,
+.jumbotron #company-rating,
+.jumbotron #featured-company-name,
+.jumbotron #featured-company-rating {
+  text-transform: uppercase;
+  font-size: 32px;
   text-align: center;
-}
-.jumbotron #signup-container input#first-name.form-control,
-.jumbotron #login-container input#first-name.form-control,
-.jumbotron #signup-container input#last-name.form-control,
-.jumbotron #login-container input#last-name.form-control,
-.jumbotron #signup-container input#email.form-control,
-.jumbotron #login-container input#email.form-control,
-.jumbotron #signup-container input#password.form-control,
-.jumbotron #login-container input#password.form-control,
-.jumbotron #signup-container input#password-confirm.form-control,
-.jumbotron #login-container input#password-confirm.form-control {
-  width: 400px;
-  margin-bottom: 5px;
-}
-.jumbotron #signup-container a#signup-link,
-.jumbotron #login-container a#signup-link,
-.jumbotron #signup-container a#login-link,
-.jumbotron #login-container a#login-link {
-  font-size: 10px;
-  color: #808080;
+  font-family: 'Poiret One', cursive;
+  margin-bottom: 10px;
+  line-height: 34px;
 }
