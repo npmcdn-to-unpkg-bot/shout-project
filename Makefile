@@ -1,4 +1,4 @@
-MANAGE = python3 ./manage.py
+MANAGE = python ./manage.py
 COFFEE = ./node_modules/coffee-script/bin/coffee
 STYLUS = ./node_modules/stylus/bin/stylus
 UGLIFY = ./node_modules/uglify-js/bin/uglifyjs

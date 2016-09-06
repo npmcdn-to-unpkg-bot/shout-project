@@ -5,6 +5,7 @@ from django.contrib.auth import logout
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect, HttpResponse
+from django.contrib.auth import authenticate, login
 from django.utils import formats
 from django.contrib import messages
 from shoutweb.views import base
@@ -22,6 +23,7 @@ def create_user(request, method="POST"):
 	print("returning user")
 	print(u)
 	login(request,u)
+	# api.login_user(request, **params)
 
     # params = _extract_params(request, 'POST')
     # return base.json_response(api.create_user(request, **params))

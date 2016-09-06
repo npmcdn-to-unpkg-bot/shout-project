@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--> 
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   {% block head_begin %}{% endblock %}
@@ -15,7 +15,7 @@
 
   <link rel="stylesheet" href="{{ STATIC_URL }}/css/master.css">
   <script type="text/javascript" src="{{ STATIC_URL }}/js/master.js"></script>
-  
+
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
@@ -72,7 +72,7 @@
                   <li class="bold-link"><a href="/users/{{ current_user.id }}">{{ current_user.email }}</a></li>
                 <li><a class="bold-link" href="/logout">Log Out</a></li>
                 {% else %}
-                  <li class="bold-link" id="login-button"><a href="/login">Log In</a></li>                
+                  <li class="bold-link" id="login-button"><a href="/login">Log In</a></li>
                 {% endif %}
               </ul>
             </div>
@@ -109,11 +109,11 @@
 
 // $("#newman").on('click', function() {
 
-// function ya() {
-  // $("#new-review-post").show();
-  // $("#yaya").css("background-color", "white !important");
-  // $("#yaya").css("z-index", "9999 !important");
-// }
+function ya() {
+  $("#new-review-post").show();
+  $("#yaya").css("background-color", "white !important");
+  $("#yaya").css("z-index", "9999 !important");
+}
 
 
 

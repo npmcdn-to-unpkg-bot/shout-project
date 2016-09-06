@@ -41,8 +41,8 @@ a:hover {
 }
 #new-review-post {
   display: none;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: rgba(50,100,250,0.6);
   position: absolute;
   top: 0;
@@ -54,13 +54,14 @@ a:hover {
   text-align: center;
   z-index: 2;
   background: #fff !important;
-  height: 300px;
+  /*height: 300px;*/
   width: 40%;
   margin: auto;
   top: 150px;
   left: 30%;
   position: absolute;
   transition: all 1s;
+  box-shadow: 1em 0.5em 1em #333;
 }
 #new-review-post #new-main-header {
   text-align: center;

@@ -124,11 +124,14 @@ class Company(ObjectModel):
     def get_rating(self):
         temp=0
         ct=0
-        for e in Review.objects.filter(company=self, is_deleted=False):
-            temp += e.review_rating
-            ct +=1
-        self.rating = int(temp / ct)
-        self.save()
+        try:
+            for e in Review.objects.filter(company=self, is_deleted=False):
+                temp += e.review_rating
+                ct +=1
+            self.rating = int(temp / ct)
+            self.save()
+        except:
+            self.rating=0
         return self.rating
 
     def get_rating_glyph(self):
@@ -142,7 +145,7 @@ class Company(ObjectModel):
             elif rating_num > 0 and rating_num <= 10:
                 g='<span class="glyphicon glyphicon-volume-up" aria-hidden="true" style="color:#05cc47;"></span> '*rating_num
             # logger.info("Retrieved rating glyph for a value of %s" % rating_num)
-            return g     
+            return g
         except:
             logger.debug("Failed to retrieve rating glyph for %s" % self.name)
             return g
@@ -196,7 +199,7 @@ class Review(ObjectModel):
             logger.info("Failed to get rating glyph")
             return g
 
-        return g    
+        return g
 
     def __str__(self):
         return str(self.review_rating)
@@ -223,12 +226,12 @@ class Shouter(ExtendedUserModel):
 
 
     def get_positive_reviews(self):
-        logger.info("Retrieving POSITIVE reviews for Shouter: %s" % self.user.username)       
+        logger.info("Retrieving POSITIVE reviews for Shouter: %s" % self.user.username)
         return self.user.reviews.filter(review_rating__gt=0)
 
 
     def get_negative_reviews(self):
-        logger.info("Retrieving NEGATIVE reviews for Shouter: %s" % self.user.username)       
+        logger.info("Retrieving NEGATIVE reviews for Shouter: %s" % self.user.username)
         return self.user.reviews.filter(review_rating__lt=0)
 
 
@@ -244,7 +247,7 @@ class Shouter(ExtendedUserModel):
         for each_review in reviews:
             t += each_review.review_rating
 
-        try: 
+        try:
             shout_clout_score = float(t / len(reviews))
         except:
             shout_clout_score = None
@@ -285,8 +288,3 @@ class Shouter(ExtendedUserModel):
 
         print(ret)
         return ret
-
-
-
-
-

@@ -41,7 +41,8 @@ def login_user(request, **kwargs):
 def create_user(**kwargs):
 	# params = request.POST.dict() if method == 'GET' else request.POST.dict()
 	print("yooo")
-	email = username = kwargs['email'].lower()
+	# email = username = kwargs['email'].lower()
+	email = kwargs['email'].lower()
 	first_name = kwargs['first_name'].lower()
 	last_name = kwargs['last_name'].lower()
 	password = kwargs['password']
@@ -153,7 +154,3 @@ def get_company_names():
 	g=[c.name for c in Company.objects.all()]
 	ret['companies'] = g
 	return ret
-
-
-
-

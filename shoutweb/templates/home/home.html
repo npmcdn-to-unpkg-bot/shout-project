@@ -15,7 +15,7 @@
 <div class="jumbotron">
     <h1 id="jumbotron-header-main">SHOUT</h1>
     {% if user.is_authenticated %}
-      <p id="write-a-review"><span id="slogan">make your voice count</span></p>
+      <p id="write-a-review"><span id="slogan" onclick="ya()">make your voice count</span></p>
     {% else %}
       <a href="/login"><p id="slogan">make your voice count</p></a>
     {% endif %}
@@ -101,10 +101,9 @@
 <script>
 
 
-    
+
 </script>
 
 </div>
 
 {% endblock %}
-
